@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shhortcut icon" href="images/pic1.jpg" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container-fluid main_menu">
+      <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/">
+              <i class="fas fa-snowflake"></i> KnowYourWeather<i
+                class="fas fa-snowflake"
+              ></i
+            ></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/weather">Weather</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/planner">Planner</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="/group">Group</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+    <div class="main_content temp_form_tm ">
+              {{!-- <form action=""> --}}
+              <form>
+              <input type="text" id="cityName" placeholder="Enter your city name" autocomplete="off">
+              <input type="text" id="cityTime" placeholder="hh:mm:ss" autocomplete="off">
+              <input type="submit" value="search" id="submitBtn">
+              </form>
+              
+   </div>
+   
+   <div id="para">
+     <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="">
+        
+        <div class="row">
+              <div class="col-3 ">
+               <label class="form-check-label" for="flexRadioDefault1" id="form_check_label"><p>date</p></label> 
+              </div>
+             <div class="col-3 ">
+               <label class="form-check-label" for="flexRadioDefault1" id="form_check_label"><p>time</p></label> 
+              </div>
+              <div class="col-3 ">
+               <label class="form-check-label" for="flexRadioDefault1" id="form_check_label"><p>weather</p></label> 
+              </div>
+       </div>
+        
+           
+      </div>
+    </div>
+    <input type="text" id="mail_from" name="msg"   placeholder="sender"><br>
+    <input type="submit" value="Submit" id="submitDataBtn">
+   <form action="/mail" >
+   
+    <input type="text" id="mail_to" name="msg" placeholder="recipient" class="mail_form"> <br>
+    <input type="text" id="msg" name="msg" value="send message" readonly class="mail_form"><br>
+    <input type="submit" value="Submit" id="submitMsg">
+    </form> 
+
+    <footer><p>Created By Priyanka</p></footer>
+    <script  src="js/planner_main.js"></script>
+  </body>
+</html>
